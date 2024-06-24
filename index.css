@@ -1,17 +1,11 @@
-:root {
+/* :root {
     
-}
+} */
 
 
 body {
     margin: 0;
     padding: 0;
-    width: 100vw;
-    height: 100vh;
-}
-
-div {
-    border: 1px solid red;
 }
 
 header {
@@ -28,10 +22,31 @@ header {
 
 header img {
     height: 6vh;
-    padding: 1vw;
+    padding: 0 6vw;
+}
+
+.user-info {
+    display: flex;
 }
 
 .user-avatar {
     border-radius: 50%;
 }
 
+.user-posts-area .user-avatar {
+    height: 6vh;
+    margin: 5vh 5vw 1vh;
+}
+
+.user-posts-area{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.user-posts-area .post-image {
+    max-width: 1000px;
+    min-width: 600px;
+    width: 100vw;
+    height: 70vh;
+}
