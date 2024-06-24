@@ -1,0 +1,37 @@
+:root {
+    
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+div {
+    border: 1px solid red;
+}
+
+header {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 9vh;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid silver;
+
+}
+
+
+header img {
+    height: 6vh;
+    padding: 1vw;
+}
+
+.user-avatar {
+    border-radius: 50%;
+}
+
