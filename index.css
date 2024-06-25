@@ -6,36 +6,51 @@
 body {
     margin: 0;
     padding: 0;
+    min-width: 600px;
+    font-family: "Work sans", sans-serif;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 24px;
+    font-weight: light;
+    margin-top: 0px;
 }
 
 header {
     display: flex;
-    margin: 0;
-    padding: 0;
     height: 9vh;
+    min-height: 100px;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid silver;
-
 }
 
 
 header img {
-    height: 6vh;
-    padding: 0 6vw;
+    height: 80px;
+    margin: 20px;
 }
 
 .user-info {
     display: flex;
+    align-items: center;
+    padding: 25px;
 }
 
 .user-avatar {
     border-radius: 50%;
+    height: 80px;
 }
 
+
 .user-posts-area .user-avatar {
-    height: 6vh;
-    margin: 5vh 5vw 1vh;
+    margin-right: 25px;
 }
 
 .user-posts-area{
@@ -45,8 +60,29 @@ header img {
 }
 
 .user-posts-area .post-image {
-    max-width: 1000px;
     min-width: 600px;
-    width: 100vw;
-    height: 70vh;
+}
+
+.social-btns {
+    display: flex;
+    margin: 0 10px;
+    width: 35%;
+    justify-content: space-around;
+}
+
+.social-btns button {
+    border: hidden;
+    background-color: inherit;
+}
+
+.social-icons {
+    height: 50px;
+}
+
+.social-icons:hover {
+    background-color: red;
+}
+
+.post-text {
+    padding: 5px 20px
 }
