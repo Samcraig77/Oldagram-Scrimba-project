@@ -1,16 +1,12 @@
-/* :root {
-    
-} */
-
-
 body {
     margin: 0;
     padding: 0;
-    min-width: 500px;
     font-family: "Source Sans 3", sans-serif;
+    overflow-x: hidden;
 }
 
 /* font styling */
+
 h2 {
     font-size: 24px;
     font-weight: bolder;
@@ -21,6 +17,10 @@ p {
     font-size: 24px;
     font-weight: light;
     margin-top: 0px;
+}
+
+.username, .like-element {
+    font-weight: bold;
 }
 
 /* header styling */
@@ -39,8 +39,13 @@ header img {
 }
 
 /* post section styling */
+#user-posts-area{
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
 
-section :last-child {
+#user-posts-area :last-child {
     border: none;
 }
 
@@ -56,29 +61,26 @@ section :last-child {
 }
 
 
-#user-posts-area .user-avatar {
+#user-posts-area img {
     margin-right: 25px;
 }
 
-#user-posts-area{
+#user-posts-area, .post {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: center;
 }
 
 .post {
-    display: flex;
-    flex-direction: column;
     padding-bottom: 30px;
     border-bottom: 1px solid grey;
-    
+    display: flex;
+    max-width: 800px;
 }
 
 #user-posts-area .post-image {
-   max-height: 57vh;
-
+   width: 98vw;
+   max-width: 800px;
+   margin: auto;
 }
 
 /* social buttons */
@@ -88,12 +90,12 @@ section :last-child {
     width: 150px;
     height: 60px;
     justify-content: space-between;
-    
 }
 
 .social-btns button {
     border: hidden;
     background-color: inherit;
+    outline: none;
 }
 
 .social-icons {
@@ -113,16 +115,15 @@ section :last-child {
 }
 
 /* comment/likes styling */
+
 .like-element  {
     margin: 30px 0 0 25px;
-    font-weight: bold;
 }
 
-.username {
-    font-weight: bold;
-}
+
 
 .post-text {
     margin: 5px 0 0 25px;
-    width: 60vh;
+    width: 90vw;
+    max-width: 750px;
 }
