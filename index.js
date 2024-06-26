@@ -30,17 +30,17 @@ const posts = [
 
 const postsArea = document.getElementById("user-posts-area")
 
+
 window.onload = function() {
-    postsArea.innerHTML = ""
 
     for (let i = 0; i < posts.length; i++) {
-        let nameEl = Object.values(posts)[i].name
-        let usernameEl = Object.values(posts)[i].username
-       let locationEl = Object.values(posts)[i].location
-       let avatarImg = Object.values(posts)[i].avatar
-       let postImg = Object.values(posts)[i].post
-       let commentEl = Object.values(posts)[i].comment
-       let likesEl = Object.values(posts)[i].likes
+        nameEl = Object.values(posts)[i].name
+        usernameEl = Object.values(posts)[i].username
+        locationEl = Object.values(posts)[i].location
+        avatarImg = Object.values(posts)[i].avatar
+        postImg = Object.values(posts)[i].post
+        commentEl = Object.values(posts)[i].comment
+        likesEl = Object.values(posts)[i].likes
 
         postLayout(nameEl, usernameEl, locationEl, avatarImg, postImg, commentEl, likesEl)
         
@@ -59,9 +59,9 @@ function postLayout(name, username, location, avatar, post, comment, likes) {
             </div>
             <img class="post-image" src=${post}>
             <div class="social-btns">
-                <button><img src="/images/icon-heart.png" class="social-icons heart"></button>
-                <button><img src="/images/icon-comment.png" class="social-icons comment"></button>
-                <button><img src="/images/icon-dm.png" class="social-icons dm"></button>
+                <button><img src="images/icon-heart.png" class="social-icons heart"></button>
+                <button><img src="images/icon-comment.png" class="social-icons comment"></button>
+                <button><img src="images/icon-dm.png" class="social-icons dm"></button>
             </div>
             <p class="like-element">${likes} likes</p>
             <p class="post-text"><span class="username">${username}</span> ${comment}</p>

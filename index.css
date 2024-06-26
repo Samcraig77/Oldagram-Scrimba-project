@@ -77,8 +77,7 @@ section :last-child {
 }
 
 #user-posts-area .post-image {
-    height: 60vh;
-    margin: 0;
+   max-height: 57vh;
 
 }
 
@@ -105,7 +104,6 @@ section :last-child {
 
 .social-icons:hover {
     height: 60px;
-    transform: translate(-10px, -10px);
     opacity: .5;
 }
 
