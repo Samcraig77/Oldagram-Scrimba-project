@@ -30,24 +30,14 @@ const posts = [
 
 const postsArea = document.getElementById("user-posts-area")
 
-
-window.onload = function() {
-
-    for (let i = 0; i < posts.length; i++) {
-        nameEl = Object.values(posts)[i].name
-        usernameEl = Object.values(posts)[i].username
-        locationEl = Object.values(posts)[i].location
-        avatarImg = Object.values(posts)[i].avatar
-        postImg = Object.values(posts)[i].post
-        commentEl = Object.values(posts)[i].comment
-        likesEl = Object.values(posts)[i].likes
-
-        postLayout(nameEl, usernameEl, locationEl, avatarImg, postImg, commentEl, likesEl)
-        
+function renderPosts() {
+    
+for (let i = 0; i < posts.length; i++) {
+    postLayout(posts[i])
     }
 }
 
-function postLayout(name, username, location, avatar, post, comment, likes) {
+function postLayout({name, username, location, avatar, post, comment, likes}) {
         postsArea.innerHTML +=  `
          <article class="post">
             <div class="user-info">
@@ -57,14 +47,16 @@ function postLayout(name, username, location, avatar, post, comment, likes) {
                     <p>${location}</p>
                 </div>
             </div>
-            <img class="post-image" src=${post}>
-            <div class="social-btns">
-                <button><img src="images/icon-heart.png" class="social-icons heart"></button>
-                <button><img src="images/icon-comment.png" class="social-icons comment"></button>
-                <button><img src="images/icon-dm.png" class="social-icons dm"></button>
+            <img class="post-image" src=${post} alt="a selfie painting of ${name}">
+            <div class="social-btns-div">
+                <button><img src="images/icon-heart.png" class="social-icons heart" aria-label="heart"></button>
+                <button><img src="images/icon-comment.png" class="social-icons comment" aria-label="comment"></button>
+                <button><img src="images/icon-dm.png" class="social-icons dm" aria-label="Direct Message"></button>
             </div>
             <p class="like-element">${likes} likes</p>
             <p class="post-text"><span class="username">${username}</span> ${comment}</p>
         </article>
         `
 }
+
+renderPosts()
