@@ -1,15 +1,22 @@
+:root {
+    --background-color: #FFFFFF;
+    --header-border: #C6C6C6;
+    --border-color: #EDEDED;
+}
+
+
 body {
     margin: 0;
     padding: 0;
     font-family: "Source Sans 3", sans-serif;
-    overflow-x: hidden;
+    background-color: var(--background-color);
 }
 
 /* font styling */
 
 h2 {
-    font-size: 24px;
-    font-weight: bolder;
+    font-size: 28px;
+    font-weight: bold;
     margin-bottom: 5px;
 }
 
@@ -29,23 +36,25 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid silver;
+    border-bottom: 1px solid var(--header-border);
+    margin: auto;
 }
 
 
 header img {
-    height: 80px;
-    margin: 20px;
+    height: 90px;
+    margin: 20px 40px;
 }
 
 /* post section styling */
-#user-posts-area{
+.user-posts-area {
     margin: 0 auto;
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
 }
 
-#user-posts-area :last-child {
+.user-posts-area :last-child {
     border: none;
 }
 
@@ -57,73 +66,63 @@ header img {
 
 .user-avatar {
     border-radius: 50%;
-    height: 80px;
+    height: 90px;
 }
 
 
-#user-posts-area img {
+.user-posts-area img {
     margin-right: 25px;
-}
-
-#user-posts-area, .post {
-    display: flex;
-    flex-direction: column;
 }
 
 .post {
     padding-bottom: 30px;
-    border-bottom: 1px solid grey;
+    border-bottom: 50px solid var(--border-color);
+    width: 100%;
+    margin: 0 auto;
     display: flex;
-    max-width: 800px;
+    flex-direction: column;
 }
 
-#user-posts-area .post-image {
-   width: 98vw;
-   max-width: 800px;
-   margin: auto;
+.post-image {
+   width: 100%;
 }
 
 /* social buttons */
 
-.social-btns {
+.social-btns-div {
+    width: 33%; 
+    margin: 30px 0 5px 10px;
     display: flex;
-    width: 150px;
-    height: 60px;
     justify-content: space-between;
 }
 
-.social-btns button {
+.social-btns-div button {
     border: hidden;
     background-color: inherit;
-    outline: none;
 }
 
 .social-icons {
-    height: 50px;
-    padding: 0 20px;
-    position: absolute;
+    width: 70%;
+    min-width: 40px;
 }
 
 .social-icons:hover {
-    height: 60px;
     opacity: .5;
 }
 
 .social-icons:active {
-    height: 30px;
-    transform: translateX(15px) translateY(10px);
+    width: 30px;
+    transform: translateX(15px); 
 }
 
 /* comment/likes styling */
 
 .like-element  {
-    margin: 30px 0 0 25px;
+    margin: 10px 0 25px 25px;
 }
 
 
 
 .post-text {
-    margin: 5px 0 0 25px;
-    width: 90vw;
-    max-width: 750px;
+    margin: 0 25px;
 }
