@@ -59,4 +59,9 @@ function postLayout({name, username, location, avatar, post, comment, likes}) {
         `
 }
 
+    document.addEventListener("click", e => {
+        [...e.target.classList].includes('heart') ? e.target.classList.toggle('liked') : ''
+        
+    })
+
 renderPosts()
